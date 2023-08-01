@@ -1,40 +1,36 @@
 package org.example;
-public class App
-{
-    public static void main( String[] args )
-    {
-        System.out.println("Test câu a: ");
-        MayTinhCasioFX500 mfx500 = new MayTinhCasioFX500();
-        MayTinhVinacal500 mvn500 = new MayTinhVinacal500();
 
-        System.out.println("5+3="+ mfx500.cong(5, 3));
-        System.out.println("4*5="+ mvn500.nhan(4, 5));
-        System.out.println("4/0="+ mvn500.chia(4, 0));
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
-        System.out.println("Test câu b: ");
+public class App {
+    public static void main(String[] args) {
+        List<String> names = new LinkedList<>();
+        names.add("John");
+        names.add("Anna");
+        names.add("Peter");
+        names.add("Victor");
 
-        int[] arr = new int[] {5,1,3,4,5,8,0};
-        int[] arr2 = new int[] {6,2,7,9,2,4,5};
-        SapXepChen sxchen = new SapXepChen();
-        SapXepChon sxchon = new SapXepChon();
+        names.add(2, "Emma");
 
-        sxchen.sapXepTang(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]+" ");
+        System.out.println("names.contains(\"Anna\"): " + names.contains("Anna"));
+
+        System.out.println("names.size(): " + names.size());
+
+        System.out.println("LinkedList: ");
+        for (String name : names) {
+            System.out.println(name);
         }
-        System.out.println();
-        sxchon.sapXepGiam(arr2);
-        for (int i = 0; i < arr2.length; i++) {
-            System.out.print(arr2[i]+" ");
-        }
-        System.out.println();
 
-        System.out.println("Test câu c:");
-        PhanMemMayTinh pmmt =new PhanMemMayTinh();
-        System.out.println("3+5=" + pmmt.cong(3, 5));
-        int[] arr3 = new int[] {6,2,7,9,2,4,5};
-        pmmt.sapXepTang(arr3);
-        for (int i = 0; i < arr3.length; i++) {
-            System.out.print(arr3[i]+" ");
-        }    }
+        System.out.println("Phần tử sẽ bị thay thế là: " + names.set(2, "Chris"));
+
+        System.out.println("Sử dụng iterator: ");
+        Iterator<String> itr = names.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+    }
+
+
 }
