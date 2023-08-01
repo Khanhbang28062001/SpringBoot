@@ -10,7 +10,7 @@ public class EnumSetExample {
         Orange, Cherry, Apple, Banana
     }
 
-    public String enumSet() {
+    public void enumSet() {
         EnumSet<Days> workingDays = EnumSet.of(Days.MONDAY, Days.TUESDAY,Days.Apple);
         System.out.println(workingDays);
 
@@ -27,6 +27,6 @@ public class EnumSetExample {
 
         EnumSet<Days> set3 = EnumSet.noneOf(Days.class);
         System.out.println(set3);
-        return null;
+
     }
 }

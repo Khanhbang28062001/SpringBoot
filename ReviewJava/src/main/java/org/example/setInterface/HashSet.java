@@ -3,7 +3,7 @@ package org.example.setInterface;
 import java.util.Set;
 
 public class HashSet {
-    public Set<Integer> hashSet(){
+    public void hashSet(){
         Set<Integer> list = new java.util.HashSet<>();
         System.out.println(list);
 
@@ -19,6 +19,5 @@ public class HashSet {
 
         list.remove(7);
         System.out.println("Set after remove element in set: " + list);
-        return list;
     }
 }
